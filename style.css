@@ -61,7 +61,7 @@ strong{
     position: absolute;
     top:0;
     left:0;
-    background: url(/images/grid.svg)repeat;
+    background: url(images/grid.svg)repeat;
     width: 100%;
     height: 100%;
     /* z-index: 1; */
