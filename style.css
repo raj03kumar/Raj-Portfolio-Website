@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 160vh;
+    overflow-x: hidden;
+}
+.container{
+    background: rgb(45, 36, 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+img{
+    border-radius: 50%;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+.about{
+    text-align: left;
+    margin-left: 40px;
+    font-size: 0.6em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#und{
+    text-decoration: underline;
+    font-size: 0.8em;
+}
+strong{
+    /* size: 10em; */
+    font-size: 2em;
+}
+.content{
+    z-index: 1;
+    color: white;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 32em;
+    width: 26em;
+    /* background: linear-gradient( #f43336 15%, #e9862a 70%); */
+    background: linear-gradient(#1b0423 30%, #5a176b 70%);
+    border-radius: 12%;
+}
+
+#hex-grid{
+    height: 160vh;
+    background: #000;
+}
+
+/* the grids */
+#hex-grid .grid{
+    position: absolute;
+    top:0;
+    left:0;
+    background: url(/images/grid.svg)repeat;
+    width: 100%;
+    height: 100%;
+    /* z-index: 1; */
+    background-size: 550px;
+}
+
+/* glow */
+#hex-grid .light{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25em;
+    height: 25em;
+    filter: blur(40px);
+    background: linear-gradient(90deg, #f43336 0%, #e9862a 100%);
+    z-index: 0;
+}
