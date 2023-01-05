@@ -3,6 +3,7 @@ body{
     padding: 0;
     min-height: 160vh;
     overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
 }
 .container{
     background: rgb(45, 36, 96);
@@ -14,27 +15,33 @@ body{
 }
 img{
     border-radius: 50%;
+    transition: 0.2s;
 }
-h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.border{
+    border: 5px solid #FF6E31;
 }
-h2{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
+img:hover{
+    box-shadow: 0px 0px 15px rgb(234, 119, 18);
+    transform: scale(1.05);
 }
+.zoom{
+    transition: 0.2s;
+}
+.zoom:hover{
+    transform: scale(1.03);
+}
+
 .about{
     text-align: left;
     margin-left: 40px;
     font-size: 0.6em;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #und{
     text-decoration: underline;
     font-size: 0.8em;
 }
 strong{
-    /* size: 10em; */
     font-size: 2em;
 }
 .content{
@@ -46,9 +53,14 @@ strong{
     text-align: center;
     height: 32em;
     width: 26em;
-    /* background: linear-gradient( #f43336 15%, #e9862a 70%); */
     background: linear-gradient(#1b0423 30%, #5a176b 70%);
     border-radius: 12%;
+    border: 4px solid #A5F1E9;
+    transition: 0.4s;
+}
+
+.content:hover{
+    filter: drop-shadow(0 0 0.7em #1cd0ff);
 }
 
 #hex-grid{
@@ -64,8 +76,7 @@ strong{
     background: url(images/grid.svg)repeat;
     width: 100%;
     height: 100%;
-    /* z-index: 1; */
-    background-size: 550px;
+    background-size: 300px;
 }
 
 /* glow */
@@ -74,8 +85,8 @@ strong{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 25em;
-    height: 25em;
+    width: 15em;
+    height: 15em;
     filter: blur(40px);
     background: linear-gradient(90deg, #f43336 0%, #e9862a 100%);
     z-index: 0;
